@@ -233,10 +233,10 @@ module CC_TOP_TB ();
         end
 
 		// step 2: cache hit requests
-        repeat(access_repeat_cnt / gen_repeat_cnt) begin 
+        repeat(gen_repeat_cnt) begin 
 			// select one of the pre-requested addresses
             hit_addr = hit_addr_queue.pop_front();
-            repeat(gen_repeat_cnt) begin
+            repeat(access_repeat_cnt / gen_repeat_cnt) begin
                 tag = hit_addr[`MEM_ADDR_WIDTH:15];
                 index = hit_addr[14:6];
                 offset = $random & 32'h0000_0038;
