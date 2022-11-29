@@ -6,10 +6,10 @@ module CC_DATA_FILL_UNIT
     input   wire            rst_n,
 	
     // AMBA AXI interface between MEM and CC (R channel)
-    // No rready in this interface
     input   wire    [63:0]  mem_rdata_i,
     input   wire            mem_rlast_i,
     input   wire            mem_rvalid_i,
+    input   wire            mem_rready_i,
 
     // Miss Addr FIFO read interface 
     input   wire            miss_addr_fifo_empty_i,
