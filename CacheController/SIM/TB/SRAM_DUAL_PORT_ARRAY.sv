@@ -29,6 +29,11 @@ module SRAM_DUAL_PORT_ARRAY
 				rdata_tag	<= tag_array[raddr_i];
 				rdata_data	<= data_array[raddr_i];
 			end
+			else begin 
+				rdata_tag	<= 'Z;
+				rdata_data	<= 'Z;
+			end
+			
 			if (wren_i) begin
 				tag_array[waddr_i]	<= wdata_tag_i;
 				data_array[waddr_i]	<= wdata_data_i;
