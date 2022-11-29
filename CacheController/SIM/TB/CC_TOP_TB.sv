@@ -303,6 +303,7 @@ module CC_TOP_TB ();
             drive_ar();
             monitor_r();
         join
+        $display("Pass the test!");
         $finish;
     end
 
