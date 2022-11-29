@@ -155,6 +155,7 @@ module CC_TOP
         .mem_rdata_i                (), 
         .mem_rlast_i                (), 
         .mem_rvalid_i               (), 
+        .mem_rready_i               (),
         .miss_addr_fifo_empty_i     (), 
         .miss_addr_fifo_rdata_i     (), 
         .miss_addr_fifo_rden_o      (), 
